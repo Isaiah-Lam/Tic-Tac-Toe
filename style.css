@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#board {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.square {
+    width: 200px;
+    height: 200px;
+    color: transparent;
+}
+#r0s1 {
+    border: 3px solid black;
+    border-top: none;
+}
+#r1s0 {
+    border: 3px solid black;
+    border-left: none;
+}
+#r1s2 {
+    border: 3px solid black;
+    border-right: none;
+}
+#r2s1 {
+    border: 3px solid black;
+    border-bottom: none;
+}
+.wincount {
+    display: none;
+}
+button {
+    display: inline-block;
+    margin: 0 10px;
+}
+#btn2 {
+    display: none;
+}
