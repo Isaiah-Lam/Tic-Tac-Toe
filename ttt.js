@@ -13,7 +13,7 @@ $(document).ready( function() {
         if ($(this).text() == "Click To Play") {
             $(this).text("Player 1's Turn");
         }
-        else if ($(this).text() == "Click To Reset") {
+        else if ($(this).text() == "Reset Board") {
             $(".square").each( function() {
                 $(this).text("");
                 $(this).css("background-image", "none")
@@ -60,11 +60,11 @@ $(document).ready( function() {
             $(".square").each( function() {
                 $(this).css("pointer-events", "none");
             });
-            $("#btn").text("Click To Reset");
+            $("#btn").text("Reset Board");
         }
         else if (count == 9) {
             alert("It's A Tie!");
-            $("#btn").text("Click To Reset");
+            $("#btn").text("Reset Board");
         }
     });
 
