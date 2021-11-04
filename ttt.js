@@ -4,7 +4,7 @@ $(document).ready( function() {
     var p1Win = 0;
     var p2Win = 0;
 
-    $("#btn").click( function() {
+    $("#btn1").click( function() {
         $("#board").css("display", "flex");
         $("#btn2").css("display", "inline-block");
         $(".wincount").each( function() {
@@ -32,17 +32,17 @@ $(document).ready( function() {
     })
 
     $(".square").click( function() {
-        if ($("#btn").text() == "Player 1's Turn") {
+        if ($("#btn1").text() == "Player 1's Turn") {
             $(this).css("background-image", "url('x.png')");
             $(this).text("x");
             $(this).css("pointer-events","none");
-            $("#btn").text("Player 2's Turn");
+            $("#btn1").text("Player 2's Turn");
         }
         else {
             $(this).css("background-image", "url('o.png')");
             $(this).text("o");
             $(this).css("pointer-events","none");
-            $("#btn").text("Player 1's Turn");
+            $("#btn1").text("Player 1's Turn");
         }
         count++;
         var classList = document.getElementById(this.id).className.split(/\s+/);
@@ -60,11 +60,11 @@ $(document).ready( function() {
             $(".square").each( function() {
                 $(this).css("pointer-events", "none");
             });
-            $("#btn").text("Reset Board");
+            $("#btn1").text("Reset Board");
         }
         else if (count == 9) {
             alert("It's A Tie!");
-            $("#btn").text("Reset Board");
+            $("#btn1").text("Reset Board");
         }
     });
 
