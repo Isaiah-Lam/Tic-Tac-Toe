@@ -74,7 +74,7 @@ $(document).ready( function() {
         if (row[0].innerHTML == row[1].innerHTML && row[0].innerHTML == row[2].innerHTML && row[0] != "") {
             return true;
         }
-        else if (col[0].innerHTML == col[1].innerHTML && col[0].innerHTML == col[2].innerHTML && row[0] != "") {
+        else if (col[0].innerHTML == col[1].innerHTML && col[0].innerHTML == col[2].innerHTML && col[0] != "") {
             return true;
         }
         else if ((c1 == "r0" && c2 == "s0") || (c1 == "r0" && c2 == "s2") || (c1 == "r1" && c2 == "s1") || (c1 == "r2" && c2 == "s0") || (c1 == "r2" && c2 == "s2")) {
