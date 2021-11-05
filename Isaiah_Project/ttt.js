@@ -3,6 +3,7 @@ $(document).ready( function() {
     var count = 0;
     var p1Win = 0;
     var p2Win = 0;
+    var tie = 0;
 
     $("#btn1").click( function() {
         $("#board").css("display", "flex");
@@ -27,8 +28,10 @@ $(document).ready( function() {
     $("#btn2").click( function() {
         p1Win = 0;
         p2Win = 0;
-        $("#win1").text("Player 1 Score: " + p1Win);
-        $("#win2").text("Player 2 Score: " + p2Win);
+        tie = 0;
+        $("#win1").text("Player 1 Score: 0");
+        $("#win2").text("Player 2 Score: 0");
+        $("#tie").text("Ties: 0");
     })
 
     $(".square").click( function() {
@@ -63,6 +66,8 @@ $(document).ready( function() {
             $("#btn1").text("Reset Board");
         }
         else if (count == 9) {
+            tie++;
+            $("#tie").text("Ties: " + tie);
             alert("It's A Tie!");
             $("#btn1").text("Reset Board");
         }
